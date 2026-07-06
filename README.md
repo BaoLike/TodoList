@@ -33,14 +33,6 @@ cd TodoList
 docker compose up --build
 ```
 
-Lần đầu sẽ mất vài phút để build. Sau khi xong:
-
-| Service | URL |
-|---------|-----|
-| Frontend | http://localhost |
-| Backend API | http://localhost:8080 |
-| PostgreSQL | localhost:5432 |
-
 ### Dừng ứng dụng
 
 ```bash
@@ -97,42 +89,13 @@ Frontend khởi động tại `http://localhost:5173`.
 
 ## Sử dụng
 
-1. Mở trình duyệt tại `http://localhost` (Docker) hoặc `http://localhost:5173` (dev)
+1. Mở trình duyệt tại `http://localhost:5173` hoặc vào link deployment `http://todolistqb.duckdns.org/`
 2. **Đăng ký** tài khoản mới
 3. **Đăng nhập** để vào trang quản lý
 4. Thêm, sửa, xóa, lọc và đánh dấu hoàn thành các công việc
 
 ---
 
-## API Endpoints
-
-Base URL: `http://localhost:8080`
-
-### Auth
-
-| Method | Endpoint | Mô tả |
-|--------|----------|-------|
-| `POST` | `/api/auth/register` | Đăng ký tài khoản |
-| `POST` | `/api/auth/login` | Đăng nhập |
-| `POST` | `/api/auth/logout` | Đăng xuất |
-
-### Todos (cần đăng nhập)
-
-| Method | Endpoint | Mô tả |
-|--------|----------|-------|
-| `GET` | `/api/todos` | Danh sách (phân trang + lọc) |
-| `POST` | `/api/todos` | Tạo mới |
-| `PUT` | `/api/todos/{id}` | Cập nhật |
-| `PATCH` | `/api/todos/{id}/status` | Cập nhật trạng thái |
-| `DELETE` | `/api/todos/{id}` | Xóa |
-
-**Query params cho GET /api/todos:**
-
-```
-?status=COMPLETED&priority=HIGH&keyword=spring&page=0&size=10
-```
-
----
 
 ## Công nghệ sử dụng
 

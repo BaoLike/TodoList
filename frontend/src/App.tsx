@@ -171,15 +171,6 @@ export default function App() {
     return (
       <div className={`min-h-screen flex items-center justify-center transition-colors duration-300 p-4 ${isDarkMode ? 'bg-slate-955 text-slate-100' : 'bg-slate-50 text-slate-800'}`}>
         <ToastContainer toasts={toasts} />
-        <div className="absolute top-4 right-4">
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-            aria-label="Toggle Theme"
-          >
-            {isDarkMode ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-slate-650" />}
-          </button>
-        </div>
         <AuthForm onSuccess={(user) => {
           setUsername(user);
           setIsLoggedIn(true);
@@ -204,9 +195,6 @@ export default function App() {
               <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 TaskFlow
               </h1>
-              <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-                Quản lý công việc thông minh & năng suất
-              </p>
             </div>
           </div>
 

@@ -210,14 +210,6 @@ export default function App() {
               Đăng xuất
             </button>
 
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-              aria-label="Toggle Theme"
-            >
-              {isDarkMode ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-slate-650" />}
-            </button>
-
             <StatsDashboard 
               totalCount={stats.total}
               completedCount={stats.completed}
